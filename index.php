@@ -11,4 +11,4 @@ $t = "1167269062:AAHX7Nvh3SkhnRmEf-69IPN_DAN-9d1D5o0";
 
 $response = file_get_contents('https://api.telegram.org/bot/' . $t . '/getUpdates');
 
-echo json_encode($response, 0);
+var_dump($response);
