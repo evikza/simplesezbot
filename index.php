@@ -9,4 +9,4 @@ $updateArray = json_decode($update, TRUE);
 
 $chatId = $updateArray["result"][0]["message"]["chat"]["id"]; 
 
-file_get_contents($website . "/sendMessage?chat_id=179897095&text=" . uniqid('', true));;
+file_get_contents($website . "/sendMessage?chat_id=" . $chatId . "&text=" . uniqid('', true));
