@@ -9,4 +9,4 @@ $update = json_decode(file_get_contents("php://input"), TRUE);
 $chatId = $update["message"]["chat"]["id"];
 // $message = $update["message"]["text"];
 
-file_get_contents($website . '/sendMessage?chat_id=' . $chatId . '&text=' . stripslahses(json_encode($update)));
+file_get_contents($website . '/sendMessage?chat_id=' . $chatId . '&text=' . json_encode($update));
