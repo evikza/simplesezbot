@@ -7,6 +7,6 @@ $website = "https://api.telegram.org/bot" . $botToken;
 $update = json_decode(file_get_contents("php://input"), TRUE);
 
 $chatId = $update["message"]["chat"]["id"];
-$message = json_encode($update);
+// $message = $update["message"]["text"];
 
-file_get_contents($website . '/sendMessage?chat_id=' . $chatId . '&text=' . $message);
+file_get_contents($website . '/sendMessage?chat_id=' . $chatId . '&text=' . stripslahses(json_encode($update)));
