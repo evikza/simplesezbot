@@ -9,4 +9,4 @@ $updateArray = json_decode($update, 1);
 
 $chatId = $updateArray["result"][0]["message"]["chat"]["id"]; 
 
-file_get_contents($website . "/sendMessage?chat_id=179897095&text=test_query");
+file_get_contents($website . "/sendMessage?chat_id=179897095&text=test_query" . $chatId . ' :s');
